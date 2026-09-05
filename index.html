@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Watermouse</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://thewatermouse.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Watermouse">
+<meta property="og:title" content="The Watermouse">
+<meta property="og:description" content="Um grupo de mídia e marketing. Agência de Google Ads, creators, mídia e educação — sob um mesmo teto.">
+<meta property="og:url" content="https://thewatermouse.com/">
+<meta name="description" content="The Watermouse — grupo de mídia e marketing. Agência de Google Ads para eCommerce EU, creators/TikTok Live, mídia e educação.">
+<style>
+  :root{
+    --sage:#4A7C6F;--sage-light:#7AAB9B;--sage-pale:#EAF2EF;--sage-dark:#2D5246;
+    --warm:#E8DDD0;--warm-deep:#C4A882;--warm-dark:#7A6450;--warm-pale:#FBF5ED;
+    --ink:#1C2B26;--off-white:#FAF8F5;--white:#FFFFFF;
+  }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;background:var(--ink);color:var(--off-white);-webkit-font-smoothing:antialiased;line-height:1.5;min-height:100vh;display:flex;flex-direction:column;}
+  a{text-decoration:none;color:inherit;}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 32px;width:100%;}
+
+  header{padding:32px 0;}
+  .logo{display:inline-flex;align-items:center;gap:10px;}
+  .logo svg{opacity:0.95;}
+  .logo-word{font-family:'Fraunces',serif;font-size:22px;font-weight:300;letter-spacing:0.04em;color:var(--off-white);}
+  .logo-tag{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-light);border-left:1px solid rgba(250,248,245,0.2);padding-left:10px;}
+
+  main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:40px 0 60px;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:500;letter-spacing:0.06em;color:var(--sage-light);margin-bottom:22px;}
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--warm-deep);}
+  h1{font-family:'Fraunces',serif;font-size:clamp(38px,6vw,66px);font-weight:300;line-height:1.05;margin-bottom:22px;max-width:14ch;}
+  h1 em{font-style:italic;color:var(--sage-light);}
+  .lead{font-size:clamp(16px,2.2vw,19px);font-weight:300;line-height:1.7;color:rgba(250,248,245,0.68);max-width:560px;margin-bottom:52px;}
+
+  .verticals{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  .card{position:relative;display:block;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:20px;padding:30px 28px;transition:background .2s,border-color .2s,transform .2s;}
+  .card.live:hover{background:rgba(255,255,255,0.07);border-color:rgba(122,171,155,0.4);transform:translateY(-3px);}
+  .card.soon{opacity:0.55;}
+  .card-k{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+  .card.live .card-k{color:var(--sage-light);}
+  .card.soon .card-k{color:rgba(250,248,245,0.45);}
+  .badge{font-size:9px;font-weight:600;letter-spacing:0.08em;padding:3px 8px;border-radius:100px;}
+  .badge.on{background:rgba(122,171,155,0.16);color:var(--sage-light);}
+  .badge.off{background:rgba(250,248,245,0.08);color:rgba(250,248,245,0.5);}
+  .card-h{font-family:'Fraunces',serif;font-size:24px;font-weight:400;color:var(--off-white);margin-bottom:8px;}
+  .card-p{font-size:14px;font-weight:300;line-height:1.6;color:rgba(250,248,245,0.6);}
+  .card-arrow{position:absolute;top:28px;right:28px;color:var(--sage-light);opacity:0;transition:opacity .2s,transform .2s;}
+  .card.live:hover .card-arrow{opacity:1;transform:translateX(2px);}
+
+  footer{padding:28px 0;border-top:1px solid rgba(250,248,245,0.08);}
+  .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .footer-copy{font-size:12px;color:rgba(250,248,245,0.35);}
+  .footer-mail{font-size:13px;color:var(--sage-light);}
+
+  @media(max-width:640px){
+    .verticals{grid-template-columns:1fr;}
+    main{padding-top:16px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="/" class="logo">
+      <svg width="24" height="24" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="22" stroke="#7AAB9B" stroke-width="1.5" fill="none"/>
+        <circle cx="24" cy="24" r="6" fill="#7AAB9B"/>
+        <line x1="24" y1="4" x2="24" y2="14" stroke="#7AAB9B" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="24" y1="34" x2="24" y2="44" stroke="#7AAB9B" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="4" y1="24" x2="14" y2="24" stroke="#7AAB9B" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="34" y1="24" x2="44" y2="24" stroke="#7AAB9B" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-word">the watermouse</span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span>Grupo de mídia &amp; marketing</div>
+    <h1>Uma casa para <em>construir, distribuir</em> e crescer.</h1>
+    <p class="lead">The Watermouse reúne várias frentes sob um mesmo teto — performance, creators, mídia e educação. Cada uma com foco próprio, todas puxando na mesma direção.</p>
+
+    <div class="verticals">
+      <a class="card live" href="https://agency.thewatermouse.com">
+        <div class="card-k">Performance <span class="badge on">No ar</span></div>
+        <div class="card-h">Agency</div>
+        <div class="card-p">Google Ads para marcas de eCommerce na Europa — expertise sênior, sem o inchaço de agência.</div>
+        <span class="card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+      </a>
+
+      <a class="card live" href="https://creators.thewatermouse.com">
+        <div class="card-k">Creators <span class="badge on">No ar</span></div>
+        <div class="card-h">Creators</div>
+        <div class="card-p">Distribuição e monetização para criadores de conteúdo — TikTok Live, influência e UGC.</div>
+        <span class="card-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+      </a>
+
+      <div class="card soon">
+        <div class="card-k">Mídia <span class="badge off">Em breve</span></div>
+        <div class="card-h">Media</div>
+        <div class="card-p">A camada de mídia do grupo — conteúdo, canais e audiência próprios.</div>
+      </div>
+
+      <div class="card soon">
+        <div class="card-k">Educação <span class="badge off">Em breve</span></div>
+        <div class="card-h">Academy</div>
+        <div class="card-p">Cursos, mentorias e formação — inglês de marketing e performance na prática.</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span class="footer-copy">© 2026 The Watermouse. Todos os direitos reservados.</span>
+    <a class="footer-mail" href="mailto:digo@thewatermouse.com">digo@thewatermouse.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
